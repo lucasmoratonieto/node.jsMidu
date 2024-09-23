@@ -1,0 +1,20 @@
+{
+  "name": "node.jsmidu",
+  "version": "1.0.0",
+  "description": "Curo de Node con midu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasmoratonieto/node.jsMidu/blob/main/2.Modulos-Nativos/8.ls-advanced.js"
+  },
+  "keywords": [
+    "curso",
+    "node",
+    "nodejs"
+  ],
+  "author": "Lucas Morato",
+  "license": "ISC"
+}
