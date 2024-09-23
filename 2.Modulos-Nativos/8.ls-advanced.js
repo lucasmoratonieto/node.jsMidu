@@ -4,6 +4,7 @@ const path = require('node:path')
 const folder = process.argv[2] ?? '.'
 
 
+
 // fs.readdir(folder,(err, files)=>{
 //     if (err){
 //         console.error('Error de directorio', err);
