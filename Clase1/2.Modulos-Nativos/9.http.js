@@ -6,7 +6,7 @@ const server = http.createServer((req,res)=>{
     res.end('Hola mundo')
 })
 
-findAvailablePort(1234).then(port =>{
+findAvailablePort(3000).then(port =>{
     server.listen(port, ()=>{
         console.log(`Server Listening on port http://localhost:${port}`);
     })
