@@ -19,6 +19,7 @@
   "author": "Lucas Morato",
   "license": "ISC",
   "dependencies": {
+    "node": "^22.9.0",
     "picocolors": "1.1.0"
   },
   "devDependencies": {
