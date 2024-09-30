@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./Clase2/1.2.http.js",
+    "dev3": "node --watch ./Clase2/3.express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,8 @@
   "author": "Lucas Morato",
   "license": "ISC",
   "dependencies": {
+    "express": "4.21.0",
+    "install": "0.13.0",
     "node": "^22.9.0",
     "picocolors": "1.1.0"
   },
