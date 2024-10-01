@@ -21,6 +21,7 @@ import movies from './movies.json' with {type: 'json'}
 // const movies = require('./movies.json')
 
 const app = express()
+
 app.use(json())
 app.use(cors())
 
