@@ -1,11 +1,27 @@
-const express = require('express')
-const crypto = require('node:crypto')
-const cors = require('cors')
-const movies = require('./movies.json')
-const { validateMovie, validatePartialMovie } = require('./schemas/movies')
+import express, { json } from 'express'
+import { randomUUID } from 'node:crypto'
+import cors from 'cors'
+
+
+import { validateMovie, validatePartialMovie } from './schemas/movies.js'
+
+
+//Ahora es asi para meter un json.
+
+import movies from './movies.json' with {type: 'json'}
+
+//Una manera de leer un json en ESModules
+
+// import fs from 'node:fs'
+// const movies = JSON.parse(fs.readFileSync('./movies.json', 'utf-8'))
+
+//JSON ESModules recomendado por ahora. Ya no se recomienda, ver la primera de ahora asi.
+// import { createRequire } from 'node:module'
+// const require = createRequire(import.meta.url)
+// const movies = require('./movies.json')
 
 const app = express()
-app.use(express.json())
+app.use(json())
 app.use(cors())
 
 const ACCEPTED_ORIGINS = [
@@ -72,7 +88,7 @@ app.post('/movies', (req, res) =>{
         
     const newMovie = {
         
-        id: crypto.randomUUID(),
+        id: randomUUID(),
         ...result.data
     }
 
@@ -105,7 +121,7 @@ app.patch('/movies/:id', (req, res) =>{
         }
         
         const {id} = req.params
-        const movieIndex = movies.findIndex(movie => movie.id == id)
+        const movieIndex = findIndex(movie => movie.id == id)
         
         if (movieIndex == -1) return res.status(404).json({message : 'Movie not found'})
 
